@@ -3,7 +3,7 @@ name: Lab - Schedule Next Run
 on:
   workflow_dispatch:
   schedule:
-    - cron: "35 14 * * *"
+    - cron: "40 14 * * *"
 
 jobs:
   schedule-job:
