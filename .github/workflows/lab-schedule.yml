@@ -1,0 +1,13 @@
+name: Lab - Schedule
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  schedule-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "This workflow runs every 5 minutes"
+          date
