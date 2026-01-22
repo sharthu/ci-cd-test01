@@ -3,7 +3,7 @@ name: Lab - Schedule Next Run
 on:
   workflow_dispatch:
   schedule:
-    - cron: "11 14 * * *"  # Next run at 14:10 UTC (~20:40 MMT)
+    - cron: "25 14 * * *"  # Next run at 14:10 UTC (~20:40 MMT)
 
 jobs:
   schedule-job:
