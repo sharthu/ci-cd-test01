@@ -2,7 +2,7 @@ name: Lab - Schedule Next Run
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/2 * * * *"
 
 jobs:
   schedule-job:
