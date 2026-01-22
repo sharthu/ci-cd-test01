@@ -1,7 +1,6 @@
 name: Lab - Schedule Next Run
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: "* * * * *"
 
