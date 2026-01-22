@@ -2,12 +2,13 @@ name: Lab - Schedule
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "50 13 * * *"
 
 jobs:
   schedule-job:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "This workflow runs every 5 minutes"
+          echo "Scheduled workflow running at 20:20 MMT (13:50 UTC)"
+          echo "UTC time:"
           date
