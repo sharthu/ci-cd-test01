@@ -1,0 +1,19 @@
+name: CI - Main Branch Only
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  main-branch-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Main Branch Workflow
+        run: |
+          echo "This workflow only runs when code is pushed to the MAIN branch."
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "You pushed to main. Running main branch CI..."
