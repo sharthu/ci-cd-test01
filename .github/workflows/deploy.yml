@@ -1,6 +1,6 @@
 name: My first CI Pipeline
 on: [push]
-job: 
+job:
     greet-and-check:
       runs-on: ubuntu-latest
         steps:
