@@ -1,0 +1,12 @@
+name: My first CI Pipeline
+on: [push]
+job: 
+    greet-and-check:
+      runs-on: ubuntu-latest
+        steps:
+          - name: Print a Greeting
+            run: echo "Hello from GitHub Action! A push event triggered this workflow."
+          - name: Show Current Directory
+            run: pwd
+          - name: Check GitHub Context
+            run: echo "This workflow is running on a ${{ runner.os }} server provided by GitHub."
