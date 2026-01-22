@@ -1,14 +1,18 @@
-name: Lab - Schedule
+name: Lab - Schedule Next Run
 
 on:
   schedule:
-    - cron: "3 14 * * *"
+    - cron: "11 14 * * *"  # Next run at 14:10 UTC (~20:40 MMT)
 
 jobs:
   schedule-job:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Scheduled workflow running at 20:20 MMT (13:50 UTC)"
+      - name: Show run time
+        run: |
+          echo "Scheduled workflow running (UTC & MMT)"
           echo "UTC time:"
-          date
+          date -u
+          echo "Myanmar Time (UTC +6:30):"
+          date -u -d '+6 hours 30 minutes'
+
