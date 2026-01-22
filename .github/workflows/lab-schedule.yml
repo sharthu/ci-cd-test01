@@ -2,7 +2,7 @@ name: Lab - Schedule
 
 on:
   schedule:
-    - cron: "50 13 * * *"
+    - cron: "3 14 * * *"
 
 jobs:
   schedule-job:
